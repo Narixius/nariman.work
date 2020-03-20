@@ -16,17 +16,6 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  generate: {
-    routes: function() {
-      const fs = require('fs')
-      return fs.readdirSync('./assets/content/blog').map(file => {
-        return {
-          route: `/blog/${file.slice(2, -5)}`,
-          payload: require(`./assets/content/blog/${file}`)
-        }
-      })
-    }
-  },
   /*
    ** Customize the progress-bar color
    */
@@ -34,21 +23,21 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/app.scss', 'flexboxgrid/css/flexboxgrid.min.css'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/squidex'],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: ['@nuxtjs/dotenv'],
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit'],
-  markdownit: {
-    injected: true
+  modules: ['@nuxtjs/style-resources'],
+  styleResources: {
+    scss: ['assets/variables.scss']
   },
   /*
    ** Build configuration
