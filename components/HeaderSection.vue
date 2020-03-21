@@ -232,6 +232,12 @@ export default {
 				@include smallerThan(650px) {
 					margin-left: 110px;
 				}
+				@include smallerThan(456px) {
+					margin: 27px 27px;
+				}
+				@include smallerThan(375px) {
+					margin: 27px auto;
+				}
 			}
 		}
 		.slider {
