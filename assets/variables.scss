@@ -1,6 +1,7 @@
 $yellow: #ffce21;
 $containerMaxWidth: 1319px;
 $largestDesktop: 1100px;
+$transitionTime: 0.2s;
 $tablet: 880px;
 @mixin forLargeScreens($media) {
   @media (min-width: $media) {

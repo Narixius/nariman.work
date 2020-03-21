@@ -81,12 +81,22 @@ export default {
 </script>
 
 <style lang="scss">
-$transitionTime: 0.2s;
 .fade-enter-active,
 .fade-leave-active {
 	direction: ltr !important;
 	&::before {
-		width: calc(100% - 30px) !important;
+		@include forLargeScreens($largestDesktop) {
+			width: calc(100% - 30px) !important;
+		}
+		@include largerSmaller(880px, $largestDesktop) {
+			width: calc(100% - 20px) !important;
+		}
+		@include smallerThan(880px) {
+			width: 100% !important;
+		}
+		@include smallerThan(650px) {
+			width: calc(100% - 42px) !important;
+		}
 	}
 	transition: transform $transitionTime ease-in;
 }
@@ -159,13 +169,23 @@ $transitionTime: 0.2s;
 			}
 		}
 		div:not(.desc) {
-			@include forLargeScreens($largestDesktop) {
-				height: 508px;
-			}
+			height: 100%;
 			position: absolute;
 			direction: rtl;
+
 			&::before {
-				margin-right: 30px;
+				// @include smallerThan(650px) {
+				// 	margin-left: 42px;
+				// }
+				@include smallerThan(650px) {
+					margin-left: 42px;
+				}
+				@include forLargeScreens(850px) {
+					margin-right: 30px;
+				}
+				@include largerSmaller(880px, $largestDesktop) {
+					margin-right: 20px;
+				}
 				transition: width $transitionTime;
 				content: ' ';
 				position: absolute;

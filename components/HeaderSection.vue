@@ -141,7 +141,7 @@ export default {
 			@include smallerThan(650px) {
 				position: absolute;
 				margin-top: -87px;
-				max-width: 90%;
+				max-width: 83%;
 				margin-left: 45px;
 			}
 			h1 {
@@ -149,6 +149,15 @@ export default {
 					margin-left: 0;
 					font-size: 35px;
 				}
+				@include smallerThan(500px) {
+					font-size: 30px;
+					width: 112%;
+				}
+				@include smallerThan(400px) {
+					font-size: 25px;
+					margin-top: 10px;
+				}
+
 				font-family: 'Montserrat-SemiBold';
 				font-size: 40px;
 			}
@@ -162,6 +171,9 @@ export default {
 				}
 				@include smallerThan(650px) {
 					margin-left: 250px;
+				}
+				@include smallerThan(425px) {
+					display: none;
 				}
 				li {
 					cursor: default;
