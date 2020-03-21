@@ -30,7 +30,7 @@ export default {
 		list-style: none;
 		li {
 			display: inline-block;
-			margin-left: 20px;
+			margin: 3px 13px;
 			&:first-child {
 				margin-left: 0;
 			}

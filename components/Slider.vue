@@ -107,27 +107,61 @@ $transitionTime: 0.2s;
 .slider {
 	.active {
 		position: relative;
-		height: 508px;
-		img {
-			margin-right: 30px;
-			width: calc(100% - 30px);
+		height: 320px;
+		@include smallerThan(650px) {
+			height: 250px;
+		}
+		@include forLargeScreens($largestDesktop) {
 			height: 508px;
+		}
+		@include largerSmaller(880px, $largestDesktop) {
+			height: 400px;
+		}
+		img {
+			@include forLargeScreens($largestDesktop) {
+				height: 508px;
+				margin-right: 30px;
+				width: calc(100% - 30px);
+			}
+			@include largerSmaller(880px, $largestDesktop) {
+				width: calc(100% - 20px);
+				margin-right: 20px;
+				height: 400px;
+			}
+			@include smallerThan(650px) {
+				height: 250px;
+				margin-left: 42px;
+			}
+			@include largerSmaller(650px, 880px) {
+				width: 100%;
+			}
+			height: 320px;
 			object-fit: cover;
 		}
+
 		.desc {
-			direction: ltr;
-			position: absolute;
-			height: 30px;
-			width: 102%;
-			top: 41%;
-			right: -15px;
-			transform: translate(45%, 100%) rotate(-90deg);
-			span {
-				line-height: 25px;
+			display: none;
+			@include largerSmaller(880px, $largestDesktop) {
+				height: 20px;
+			}
+			@include forLargeScreens(880px) {
+				display: block;
+				direction: ltr;
+				position: absolute;
+				height: 30px;
+				width: 102%;
+				top: 41%;
+				right: -15px;
+				transform: translate(45%, 100%) rotate(-90deg);
+				span {
+					line-height: 25px;
+				}
 			}
 		}
 		div:not(.desc) {
-			height: 508px;
+			@include forLargeScreens($largestDesktop) {
+				height: 508px;
+			}
 			position: absolute;
 			direction: rtl;
 			&::before {
@@ -142,16 +176,60 @@ $transitionTime: 0.2s;
 		}
 	}
 	.utils {
+		position: relative;
+		@include smallerThan(650px) {
+			margin-left: 131px;
+		}
 		.images {
-			margin-top: 10px;
+			@include forLargeScreens(880px) {
+				padding-right: 30px;
+			}
+			@include largerSmaller(880px, $largestDesktop) {
+				padding-right: 20px;
+			}
+			@include largerSmaller(650px, 880px) {
+				width: calc(100% - 130px);
+			}
+			@include smallerThan(650px) {
+				width: 75px;
+				background-color: transparent;
+				margin-top: -9px;
+			}
+			padding-bottom: 10px;
+			background-color: white;
+			z-index: 10;
+			position: absolute;
+			padding-top: 10px;
+			right: 0;
+			margin-top: 0;
 			direction: rtl;
-			padding-right: 30px;
 			max-width: 466px;
 			float: right;
 			img {
+				display: none;
+				@include forLargeScreens(650px) {
+					display: inline-block;
+				}
 				cursor: pointer;
-				width: 84px;
-				height: 84px;
+				@include forLargeScreens($largestDesktop) {
+					width: 84px;
+					height: 84px;
+				}
+				@include largerSmaller(955px, $largestDesktop) {
+					width: 73px;
+					height: 73px;
+				}
+				@include largerSmaller(880px, 955px) {
+					width: 60px;
+					height: 60px;
+				}
+				@include largerSmaller(650px, 880px) {
+					width: 28%;
+					margin-left: 5%;
+				}
+
+				width: 50px;
+				height: 50px;
 				object-fit: cover;
 				margin-left: 10px;
 			}
@@ -160,13 +238,14 @@ $transitionTime: 0.2s;
 				padding-left: 15px;
 				padding-top: 5px;
 				button {
+					float: left;
 					cursor: pointer;
 					width: 30px;
 					height: 30px;
 					border: 1px solid black;
 					margin: 0;
 					background-color: white;
-					margin-left: -5px;
+					margin-left: -1px;
 					&.prev::before {
 						content: ' ';
 						display: block;

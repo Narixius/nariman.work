@@ -1,1 +1,19 @@
 $yellow: #ffce21;
+$containerMaxWidth: 1319px;
+$largestDesktop: 1100px;
+$tablet: 880px;
+@mixin forLargeScreens($media) {
+  @media (min-width: $media) {
+    @content;
+  }
+}
+@mixin smallerThan($media) {
+  @media (max-width: $media - 1px) {
+    @content;
+  }
+}
+@mixin largerSmaller($larger, $smaller) {
+  @media (min-width: $larger) and (max-width: $smaller - 1px) {
+    @content;
+  }
+}

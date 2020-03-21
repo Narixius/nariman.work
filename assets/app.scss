@@ -100,3 +100,22 @@
     }
   }
 }
+
+.col-6 {
+  flex-basis: 50%;
+  max-width: 50%;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+}

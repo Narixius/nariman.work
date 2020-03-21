@@ -8,9 +8,9 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss">
 .cntner {
-	max-width: 1319px;
+	max-width: $containerMaxWidth;
 	margin: 0 auto;
 	position: relative;
 }

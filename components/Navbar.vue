@@ -13,10 +13,24 @@ export default {}
 <style lang="scss">
 .navbar {
 	li {
-		padding: 20px;
-		font-size: 15px;
 		display: inline-block;
-		margin-left: 25px;
+		@include forLargeScreens(700px) {
+			display: inline-block;
+			margin-left: 35px;
+			padding: 10px;
+			font-size: 15px;
+		}
+		@include largerSmaller(650px, 700px) {
+			padding: 10px;
+			font-size: 15px;
+		}
+		@include smallerThan(650px) {
+			margin-top: 20px;
+			margin-left: 17px;
+		}
+		margin: 10px;
+		padding: 0;
+		font-size: 14px;
 		&:first-child {
 			margin-left: 0;
 		}
