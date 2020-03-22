@@ -51,6 +51,21 @@ export default {
 
 <style lang="scss">
 .header {
+	@include forLargeScreens($largestDesktop) {
+		min-height: 800px;
+	}
+	@include largerSmaller(955px, $largestDesktop) {
+		min-height: 681px;
+	}
+	@include largerSmaller(880px, 955px) {
+		min-height: 667px;
+	}
+	@include largerSmaller(650px, 880px) {
+		min-height: 580px;
+	}
+	@include smallerThan(650px) {
+		height: 620px;
+	}
 	.row {
 		@include smallerThan($tablet) {
 			margin-top: -85px;
@@ -134,6 +149,9 @@ export default {
 		@include largerSmaller(650px, 880px) {
 			max-width: 100%;
 			width: 100%;
+		}
+		@include smallerThan(650px) {
+			margin-top: 100px;
 		}
 		max-width: 85%;
 		margin: 120px auto 0 auto;

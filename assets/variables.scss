@@ -8,6 +8,11 @@ $tablet: 880px;
     @content;
   }
 }
+@mixin largerThan($media) {
+  @media (min-width: $media) {
+    @content;
+  }
+}
 @mixin smallerThan($media) {
   @media (max-width: $media - 1px) {
     @content;

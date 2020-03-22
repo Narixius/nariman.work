@@ -1,13 +1,18 @@
 <template>
-  <header-section :pageData="page" />
+  <div>
+    <header-section :pageData="page" />
+    <AboutMeSection :pageData="page" />
+  </div>
 </template>
 
 <script>
 import HeaderSection from '~/components/HeaderSection.vue'
+import AboutMeSection from '~/components/AboutMeSection.vue'
 import { runQuary } from '~/plugins/squidex'
 export default {
 	components: {
-		HeaderSection
+		HeaderSection,
+		AboutMeSection
 	},
 	async asyncData(context) {
 		return {
@@ -48,6 +53,22 @@ export default {
 												'instagram',
 												'linkedIn',
 												'twitter'
+											]
+										}
+									]
+								},
+								{
+									aboutMeContent: [
+										{
+											iv: [
+												'title',
+												'textContent',
+												'metaData',
+												'buttonText',
+												'buttonLink',
+												{
+													image: ['metadata', 'url']
+												}
 											]
 										}
 									]
