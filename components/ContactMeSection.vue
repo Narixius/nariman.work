@@ -130,12 +130,14 @@ export default {
 								email: '',
 								message: ''
 							}
-							text = [this.contactMeContent.messageSentText]
-							this.alert = {
-								show: true,
-								class: 'success',
-								text
-							}
+							setTimeout(() => {
+								text = [this.contactMeContent.messageSentText]
+								this.alert = {
+									show: true,
+									class: 'success',
+									text
+								}
+							}, 100)
 						} else {
 							text = [this.contactMeContent.messageError]
 							this.alert = {
