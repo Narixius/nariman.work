@@ -7,5 +7,5 @@
   functions = "functions"
 [[redirects]]
   from = "/api/contact"
-  to = "/.netlify/functions/contact"
+  to = "/.netlify/functions/contactFrom"
   status = 200
