@@ -181,9 +181,9 @@ export default {
 			text-align: center;
 		}
 	}
-	padding-right: 60px;
+	padding-right: 40px;
 	@include smallerThan(900px) {
-		padding-left: 75px;
+		padding-left: 60px;
 	}
 	.row {
 		.col-6 {
@@ -209,6 +209,9 @@ export default {
 				height: 440px;
 			}
 
+			@include smallerThan(500px) {
+				width: calc(100% - 40px) !important;
+			}
 			@include smallerThan(900px) {
 				width: 400px;
 				margin-top: 20px;
@@ -230,8 +233,9 @@ export default {
 				width: calc(100% - 180px);
 
 				@include smallerThan(520px) {
-					width: calc(100% + 20px) !important;
-					margin-left: -10px !important;
+					width: calc(100% - 40px) !important;
+					margin: unset !important;
+					margin-top: 40px !important;
 				}
 				@include smallerThan(900px) {
 					width: 360px;
