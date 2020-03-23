@@ -2,17 +2,20 @@
   <div>
     <header-section :pageData="page" />
     <AboutMeSection :pageData="page" />
+    <MySkillsSection :pageData="page" />
   </div>
 </template>
 
 <script>
 import HeaderSection from '~/components/HeaderSection.vue'
 import AboutMeSection from '~/components/AboutMeSection.vue'
+import MySkillsSection from '~/components/MySkillsSection.vue'
 import { runQuary } from '~/plugins/squidex'
 export default {
 	components: {
 		HeaderSection,
-		AboutMeSection
+		AboutMeSection,
+		MySkillsSection
 	},
 	async asyncData(context) {
 		return {
@@ -69,6 +72,20 @@ export default {
 												{
 													image: ['metadata', 'url']
 												}
+											]
+										}
+									]
+								},
+								{
+									mySkillsSection: [
+										{
+											iv: [
+												'sectionTitle',
+												'title',
+												'description',
+												'metaData',
+												'toolsTitle',
+												'tools'
 											]
 										}
 									]

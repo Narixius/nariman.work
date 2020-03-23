@@ -104,8 +104,10 @@
   width: 100%;
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  @include largerThan(400px) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
 .row {
   box-sizing: border-box;

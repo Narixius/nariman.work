@@ -122,7 +122,7 @@ export default {
 				}
 			}
 			@include forLargeScreens(650px) {
-				right: unset;
+				right: -1px;
 			}
 			right: 10px;
 			position: absolute;

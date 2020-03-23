@@ -81,9 +81,10 @@ export default {
 		}
 	}
 	padding-right: 60px;
-	padding-left: 60px;
+	@include smallerThan(880px) {
+		padding-left: 75px;
+	}
 	padding-top: 280px;
-	padding-bottom: 180px;
 	.row {
 		@include largerThan(860px) {
 			direction: rtl;
@@ -110,6 +111,10 @@ export default {
 			p.textContent {
 				&:nth-child(2) {
 					margin-top: 50px;
+				}
+
+				@include largerThan(880px) {
+					margin-left: 5px;
 				}
 				margin-top: 30px;
 				line-height: 27px;
