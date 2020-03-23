@@ -1,6 +1,5 @@
-require('dotenv').config()
 const { Validator } = require('node-input-validator')
-const TOKEN = process.env.API_TOKEN
+const TOKEN = '294830180:AAGXaCF1DlSqE8Lyk9VYbzYYKRMfBA5RHUw'
 const rp = require('request-promise')
 exports.handler = async (event, context) => {
   if (event.httpMethod == 'POST') {
@@ -30,7 +29,7 @@ exports.handler = async (event, context) => {
       trueDate[0] = trueDate[1]
       trueDate[1] = tmp
       date = trueDate.join('/') + ' ' + date.split(',')[1]
-      let text = '#Contact_Form\n'
+      let text = 'nariman.work #Contact_Form\n'
       text += '⏰ ' + date + '\n'
       text += '📧 Email: ' + event.queryStringParameters.email + '\n'
       text += '📬 Message:\n' + event.queryStringParameters.message
