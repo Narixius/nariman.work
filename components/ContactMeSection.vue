@@ -95,7 +95,10 @@ export default {
 		}
 	},
 	watch: {
-		form() {
+		'form.email'() {
+			this.alert.show = false
+		},
+		'form.message'() {
 			this.alert.show = false
 		}
 	},
