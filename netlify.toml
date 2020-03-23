@@ -5,3 +5,7 @@
   command = "yarn generate"
   publish = "dist"
   functions = "functions"
+[[redirects]]
+  from = "/contact"
+  to = "/.netlify/functions/contact"
+  status = 200
