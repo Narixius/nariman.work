@@ -94,6 +94,11 @@ export default {
 			return this.pageData.contactMeContent.iv[0]
 		}
 	},
+	watch: {
+		form() {
+			this.alert.show = false
+		}
+	},
 	methods: {
 		submit() {
 			let text = []
