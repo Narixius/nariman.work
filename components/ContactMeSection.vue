@@ -110,7 +110,10 @@ export default {
 				)
 			}
 			if (text.length == 0) {
+				this.form.message = this.form.message.substring(0, 1000)
+
 				//submit form
+
 				text = [this.contactMeContent.messageSentText]
 				this.alert = {
 					show: true,
@@ -281,6 +284,9 @@ export default {
 			}
 			&.danger {
 				border: 1px solid red;
+			}
+			@include largerThan(1150px) {
+				width: 47%;
 			}
 		}
 	}
