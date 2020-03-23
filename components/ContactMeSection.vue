@@ -113,13 +113,37 @@ export default {
 				this.form.message = this.form.message.substring(0, 1000)
 
 				//submit form
-
-				text = [this.contactMeContent.messageSentText]
-				this.alert = {
-					show: true,
-					class: 'success',
-					text
-				}
+				const axios = require('axios').default
+				axios
+					.post('/api/contact', this.form)
+					.then(response => {
+						if (
+							typeof response.data.ok !== 'undefined' &&
+							response.data.ok === true
+						) {
+							text = [this.contactMeContent.messageSentText]
+							this.alert = {
+								show: true,
+								class: 'success',
+								text
+							}
+						} else {
+							text = [this.contactMeContent.messageError]
+							this.alert = {
+								show: true,
+								class: 'dangar',
+								text
+							}
+						}
+					})
+					.catch(() => {
+						text = [this.contactMeContent.messageError]
+						this.alert = {
+							show: true,
+							class: 'dangar',
+							text
+						}
+					})
 			} else {
 				this.alert = {
 					show: true,

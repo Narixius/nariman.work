@@ -106,7 +106,8 @@ export default {
 												'buttonText',
 												'postUrl',
 												'socialMediaText',
-												'messageSentText'
+												'messageSentText',
+												'messageError'
 											]
 										}
 									]
