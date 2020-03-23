@@ -121,10 +121,9 @@ export default {
 					margin-left: 0;
 				}
 			}
-			@include forLargeScreens(650px) {
+			@include smallerThan(650px) {
 				right: -1px;
 			}
-			right: 10px;
 			position: absolute;
 			bottom: 10px;
 		}

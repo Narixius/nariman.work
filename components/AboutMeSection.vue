@@ -194,7 +194,6 @@ export default {
 				width: 100%;
 			}
 			background-color: $yellow;
-			opacity: 1;
 			height: 100%;
 			top: 0;
 			right: 0;

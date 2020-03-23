@@ -104,7 +104,9 @@ export default {
 												'description',
 												'formTitle',
 												'buttonText',
-												'postUrl'
+												'postUrl',
+												'socialMediaText',
+												'messageSentText'
 											]
 										}
 									]
