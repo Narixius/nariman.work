@@ -127,6 +127,10 @@ export default {
 								class: 'success',
 								text
 							}
+							this.form = {
+								email: '',
+								message: ''
+							}
 						} else {
 							text = [this.contactMeContent.messageError]
 							this.alert = {
@@ -201,7 +205,7 @@ export default {
 				left: 50%;
 				transform: translateX(-50%);
 			}
-			height: 180px;
+			height: 210px;
 			position: absolute;
 		}
 		.img {
