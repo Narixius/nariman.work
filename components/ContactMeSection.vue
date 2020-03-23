@@ -115,7 +115,7 @@ export default {
 				//submit form
 				const axios = require('axios').default
 				axios
-					.post('/api/contact', this.form)
+					.post('/api/contact', null, { params: this.form })
 					.then(response => {
 						if (
 							typeof response.data.ok !== 'undefined' &&
