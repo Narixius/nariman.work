@@ -3,6 +3,7 @@
     <header-section :pageData="page" />
     <AboutMeSection :pageData="page" />
     <MySkillsSection :pageData="page" />
+    <contactMeSection :pageData="page" />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import HeaderSection from '~/components/HeaderSection.vue'
 import AboutMeSection from '~/components/AboutMeSection.vue'
 import MySkillsSection from '~/components/MySkillsSection.vue'
+import contactMeSection from '~/components/ContactMeSection.vue'
 import { runQuary } from '~/plugins/squidex'
 export default {
 	components: {
 		HeaderSection,
 		AboutMeSection,
-		MySkillsSection
+		MySkillsSection,
+		contactMeSection
 	},
 	async asyncData(context) {
 		return {
@@ -86,6 +89,22 @@ export default {
 												'metaData',
 												'toolsTitle',
 												'tools'
+											]
+										}
+									]
+								},
+								{
+									contactMeContent: [
+										{
+											iv: [
+												'title',
+												{
+													image: ['url']
+												},
+												'description',
+												'formTitle',
+												'buttonText',
+												'postUrl'
 											]
 										}
 									]

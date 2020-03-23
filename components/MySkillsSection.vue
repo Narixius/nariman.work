@@ -91,12 +91,17 @@ export default {
 		}
 	}
 	.title {
+		margin-left: -20px;
 		margin-bottom: 30px;
 		@include smallerThan(880px) {
 			text-align: center;
 			margin-bottom: 50px !important;
 		}
 	}
+	.wrapper {
+		margin-bottom: 120px;
+	}
+	padding-bottom: 40px;
 	.titleContainer {
 		padding-right: 60px;
 		padding-left: 60px;
