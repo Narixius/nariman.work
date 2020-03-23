@@ -126,15 +126,15 @@ export default {
 							typeof response.data.ok !== 'undefined' &&
 							response.data.ok === true
 						) {
+							this.form = {
+								email: '',
+								message: ''
+							}
 							text = [this.contactMeContent.messageSentText]
 							this.alert = {
 								show: true,
 								class: 'success',
 								text
-							}
-							this.form = {
-								email: '',
-								message: ''
 							}
 						} else {
 							text = [this.contactMeContent.messageError]
