@@ -317,6 +317,7 @@ export default {
 				font-size: 20px;
 			}
 			p {
+				line-height: 25px;
 				margin-top: 10px;
 				font-family: 'Montserrat-Regular';
 			}
