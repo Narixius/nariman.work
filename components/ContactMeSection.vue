@@ -145,7 +145,7 @@ export default {
 							text = [this.contactMeContent.messageError]
 							this.alert = {
 								show: true,
-								class: 'dangar',
+								class: 'danger',
 								text
 							}
 						}
@@ -154,7 +154,7 @@ export default {
 						text = [this.contactMeContent.messageError]
 						this.alert = {
 							show: true,
-							class: 'dangar',
+							class: 'danger',
 							text
 						}
 					})
