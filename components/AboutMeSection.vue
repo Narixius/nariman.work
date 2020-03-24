@@ -165,7 +165,10 @@ export default {
 			@include largerThan(880px) {
 				padding: 20px;
 			}
-			padding: 7px;
+
+			@include largerThan(450px) {
+				padding: 7px;
+			}
 			height: 100%;
 			img {
 				@include largerThan(900px) {
@@ -192,6 +195,9 @@ export default {
 			}
 			@include smallerThan(900px) {
 				width: 100%;
+			}
+			@include smallerThan(450px) {
+				height: calc(100% - 20px);
 			}
 			background-color: $yellow;
 			height: 100%;

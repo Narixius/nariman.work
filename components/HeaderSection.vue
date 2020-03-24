@@ -235,6 +235,10 @@ export default {
 					margin-top: 290px;
 					margin-left: 110px;
 				}
+				@include smallerThan(400px) {
+					margin-top: 310px;
+					margin-left: 125px;
+				}
 				line-height: 31px;
 				margin-top: 50px;
 				max-width: 430px;
@@ -247,11 +251,11 @@ export default {
 				@include smallerThan(650px) {
 					margin-left: 110px;
 				}
-				@include smallerThan(456px) {
-					margin: 27px 27px;
-				}
-				@include smallerThan(375px) {
-					margin: 27px auto;
+				// @include smallerThan(456px) {
+				// 	margin: 45px auto;
+				// }
+				@include smallerThan(450px) {
+					display: none;
 				}
 			}
 		}
