@@ -181,9 +181,9 @@ export default {
 			text-align: center;
 		}
 	}
-	padding-right: 40px;
+	padding-right: 55px;
 	@include smallerThan(900px) {
-		padding-left: 60px;
+		padding-left: 55px;
 	}
 	.row {
 		.col-6 {
@@ -256,6 +256,7 @@ export default {
 			padding: 20px;
 			background-color: white;
 			text-align: left;
+			line-height: 26px;
 			@include largerThan(900px) {
 				top: 500px;
 				position: absolute;

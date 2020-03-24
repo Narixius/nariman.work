@@ -80,11 +80,11 @@ export default {
 			text-align: center;
 		}
 	}
-	padding-right: 60px;
+	padding-right: 75px;
 	@include smallerThan(880px) {
 		padding-left: 75px;
 	}
-	padding-top: 280px;
+	margin-top: 280px;
 	.row {
 		@include largerThan(860px) {
 			direction: rtl;

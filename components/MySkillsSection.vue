@@ -171,6 +171,8 @@ export default {
 		h3 {
 			font-family: 'Montserrat-SemiBold';
 			span {
+				display: inline-block;
+				padding: 0 3px;
 				background-color: $yellow;
 			}
 		}

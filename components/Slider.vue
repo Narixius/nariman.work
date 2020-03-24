@@ -120,6 +120,7 @@ export default {
 		height: 320px;
 		@include smallerThan(650px) {
 			height: 250px;
+			margin-top: 30px;
 		}
 		@include forLargeScreens($largestDesktop) {
 			height: 508px;

@@ -92,10 +92,10 @@ export default {
 		}
 		@include largerSmaller(650px, 880px) {
 			width: 190px;
-			height: 580px;
+			height: 720px;
 		}
 		width: 150px;
-		height: 620px;
+		height: 650px;
 		top: 0;
 		left: 0;
 		text-align: center;
@@ -165,6 +165,8 @@ export default {
 				@include smallerThan(650px) {
 					margin-left: 0;
 					font-size: 35px;
+					margin-bottom: 20px;
+					margin-top: 20px;
 				}
 				@include smallerThan(500px) {
 					font-size: 30px;
@@ -230,11 +232,7 @@ export default {
 			}
 			p {
 				@include smallerThan(650px) {
-					margin-top: 343px;
-					margin-left: 139px;
-				}
-				@include smallerThan(650px) {
-					margin-top: 275px;
+					margin-top: 290px;
 					margin-left: 110px;
 				}
 				line-height: 31px;
