@@ -272,7 +272,7 @@ export default {
 				height: 440px;
 			}
 
-			@include smallerThan(500px) {
+			@include smallerThan(550px) {
 				width: calc(100% - 40px) !important;
 			}
 			@include smallerThan(900px) {
@@ -328,7 +328,10 @@ export default {
 			@include smallerThan(900px) {
 				margin-top: 20px;
 			}
-
+			@include smallerThan(1060px) {
+				padding-left: 0;
+				padding-right: 0;
+			}
 			@include largerThan(1060px) {
 				right: -10%;
 				top: 380px;
@@ -404,7 +407,7 @@ export default {
 		}
 		text-align: center;
 		margin-bottom: 30px;
-		margin-top: 30px;
+		margin-top: 70px;
 	}
 	.multiply.d {
 		@include smallerThan(900px) {
@@ -431,6 +434,9 @@ export default {
 			top: 1080px !important;
 			left: 358px !important;
 		}
+	}
+	.dotUtils {
+		min-height: calc(100vh - 130px);
 	}
 }
 </style>
