@@ -4,14 +4,14 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Nariman Movaffaghi',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
+        hid: "Nariman Movaffaghi's personal portfolio",
+        name: "Nariman Movaffaghi's personal portfolio",
+        content: "Nariman Movaffaghi's personal portfolio"
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -35,7 +35,10 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources'],
+  modules: [
+    '@nuxtjs/style-resources',
+    ['vue-scrollto/nuxt', { duration: 500 }]
+  ],
   styleResources: {
     scss: ['assets/variables.scss']
   },

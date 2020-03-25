@@ -2,7 +2,7 @@
   <div class="navigation">
     <ul class="deskNav">
       <li @click="menuClicked(0)">About Me</li>
-      <li @click="menuClicked(3)">My Skills</li>
+      <li @click="menuClicked(1)">My Skills</li>
       <li @click="menuClicked(2)">Contact Me</li>
       <li
         class="navBtn"
@@ -45,6 +45,18 @@ export default {
 	methods: {
 		menuClicked(index) {
 			this.navWrapper = false
+			let className = ''
+			switch (index) {
+				case 0:
+					this.$scrollTo('.aboutme', { offset: -150 })
+					break
+				case 1:
+					this.$scrollTo('.myskills', { offset: 80 })
+					break
+				case 2:
+					this.$scrollTo('.contactme', { offset: -150 })
+					break
+			}
 		}
 	}
 }

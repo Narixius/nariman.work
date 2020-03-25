@@ -10,6 +10,11 @@
     <div class="content row">
       <div class="col-6 slider">
         <Slider :images="headerContent.sliderImages" />
+        <img
+          class="groupDot"
+          src="/img/groupDot.svg"
+          alt
+        />
       </div>
       <div class="col-6 informations">
         <h1>{{headerContent.headerText}}</h1>
@@ -17,8 +22,91 @@
           <li v-for="tag in headerContent.tags">{{tag}}</li>
         </ul>
         <p>{{headerContent.description}}</p>
-        <button class="btn arrow">{{headerContent.buttonText}}</button>
+        <button
+          class="btn arrow"
+          @click="$scrollTo('.aboutme', { offset: -150 })"
+        >{{headerContent.buttonText}}</button>
       </div>
+    </div>
+
+    <div class="dotUtils">
+      <Multiply :style="{
+		 top: '110px',
+		 left: '400px',
+		 zIndex: '-1'
+	 }" />
+      <Multiply :style="{
+		 top: '80px',
+		 left: '1220px',
+		 zIndex: '-1'
+	 }" />
+      <Multiply :style="{
+		 top: '650px',
+		 left: '928px',
+		 zIndex: '-1'
+	 }" />
+      <Multiply :style="{
+		 top: '850px',
+		 left: '176px',
+		 zIndex: '-1'
+	 }" />
+
+      <div
+        class="dot a"
+        :style="{
+		 top: '89px',
+		 left: '858px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot"
+        :style="{
+		 top: '900px',
+		 left: '166px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot"
+        :style="{
+		 top: '990px',
+		 left: '756px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot"
+        :style="{
+		 top: '650px',
+		 left: '606px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot"
+        :style="{
+		 top: '850px',
+		 left: '1196px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot"
+        :style="{
+		 top: '339px',
+		 left: '1176px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot"
+        :style="{
+		 top: '580px',
+		 left: '1303px',
+		 zIndex: '-1'
+	 }"
+      ></div>
     </div>
   </container>
 </template>
@@ -28,6 +116,7 @@ import container from './Container'
 import Navbar from '~/components/Navbar'
 import Slider from '~/components/Slider'
 import SocialMedia from '~/components/SocialMedia'
+import Multiply from '~/components/Multiply.vue'
 export default {
 	props: {
 		pageData: {
@@ -44,7 +133,8 @@ export default {
 		container,
 		Navbar,
 		Slider,
-		SocialMedia
+		SocialMedia,
+		Multiply
 	}
 }
 </script>
@@ -263,7 +353,22 @@ export default {
 			@include largerSmaller(650px, 880px) {
 				padding-left: 30px;
 			}
+			.groupDot {
+				display: none;
+				@include largerThan(1000px) {
+					display: block;
+					position: absolute;
+					margin-top: -122px;
+					margin-left: -65px;
+				}
+			}
 			margin-top: -15px;
+		}
+	}
+	.dot.a {
+		@include smallerThan(900px) {
+			top: 380px !important;
+			left: 304px !important;
 		}
 	}
 }

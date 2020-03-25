@@ -57,6 +57,67 @@
       <span>{{contactMeContent.socialMediaText}}</span>
       <SocialMedia :socialMedia="pageData.socialMedia.iv[0]" />
     </div>
+    <div class="dotUtils">
+      <Multiply :style="{
+		 top: '600px',
+		 left: '40px',
+		 zIndex: '-1'
+	 }" />
+      <Multiply :style="{
+		 top: '23px',
+		 left: '1220px',
+		 zIndex: '-1'
+	 }" />
+      <Multiply
+        class="c"
+        :style="{
+		 top: '650px',
+		 left: '928px',
+		 zIndex: '-1'
+	 }"
+      />
+      <Multiply
+        class="d"
+        :style="{
+		 top: '75px',
+		 left: '176px',
+		 zIndex: '-1'
+	 }"
+      />
+
+      <div
+        class="dot"
+        :style="{
+		 top: '89px',
+		 left: '858px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot"
+        :style="{
+		 top: '650px',
+		 left: '606px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot s"
+        :style="{
+		 top: '339px',
+		 left: '1176px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot c"
+        :style="{
+		 top: '580px',
+		 left: '1303px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+    </div>
   </container>
 </template>
 
@@ -64,11 +125,13 @@
 import container from './Container'
 import Title from '~/components/Title.vue'
 import SocialMedia from '~/components/SocialMedia'
+import Multiply from '~/components/Multiply.vue'
 export default {
 	components: {
 		container,
 		Title,
-		SocialMedia
+		SocialMedia,
+		Multiply
 	},
 	props: {
 		pageData: {
@@ -276,7 +339,6 @@ export default {
 	.form {
 		span {
 			font-family: 'Montserrat-SemiBold';
-			font-size: 20px;
 		}
 		& > div {
 			margin-top: 50px;
@@ -343,6 +405,32 @@ export default {
 		text-align: center;
 		margin-bottom: 30px;
 		margin-top: 30px;
+	}
+	.multiply.d {
+		@include smallerThan(900px) {
+			top: 45px !important;
+			left: 374px !important;
+		}
+	}
+	.multiply.c {
+		@include smallerThan(900px) {
+			top: 1050px !important;
+			left: 40px !important;
+			z-index: 1 !important;
+		}
+	}
+	.dot.s {
+		@include smallerThan(900px) {
+			top: 690px !important;
+			left: 380px !important;
+			z-index: 1 !important;
+		}
+	}
+	.dot.c {
+		@include smallerThan(900px) {
+			top: 1080px !important;
+			left: 358px !important;
+		}
 	}
 }
 </style>

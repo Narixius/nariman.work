@@ -9,6 +9,11 @@
         <div class="shadow">
           <span>{{aboutMeContent.image[0].metadata.description}}</span>
         </div>
+        <img
+          class="groupDot"
+          src="/img/groupDot.svg"
+          alt
+        />
         <div class="img">
           <img
             :src="aboutMeContent.image[0].url"
@@ -35,13 +40,80 @@
               </li>
             </ul>
           </div>
-          <button class="btn arrow">{{aboutMeContent.buttonText}}</button>
+          <button
+            class="btn arrow"
+            @click="$scrollTo('.myskills', { offset: 80 })"
+          >{{aboutMeContent.buttonText}}</button>
         </div>
       </div>
     </div>
-    <!-- {{
-    aboutMeContent
-    }}-->
+
+    <div class="dotUtils">
+      <Multiply :style="{
+		 top: '34px',
+		 left: '400px',
+		 zIndex: '-1'
+	 }" />
+      <Multiply :style="{
+		 top: '650px',
+		 left: '626px',
+		 zIndex: '-1'
+	 }" />
+      <Multiply :style="{
+		 top: '850px',
+		 left: '1176px',
+		 zIndex: '-1'
+	 }" />
+
+      <div
+        class="dot"
+        :style="{
+		 top: '80px',
+		 left: '506px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot b"
+        :style="{
+		 top: '770px',
+		 left: '166px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot a"
+        :style="{
+		 top: '890px',
+		 left: '756px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot"
+        :style="{
+		 top: '450px',
+		 left: '606px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot r"
+        :style="{
+		 top: '751px',
+		 left: '1265px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot"
+        :style="{
+		 top: '451px',
+		 left: '-30px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+    </div>
   </container>
 </template>
 
@@ -49,11 +121,13 @@
 import container from './Container'
 import Title from '~/components/Title.vue'
 import SocialMedia from '~/components/SocialMedia'
+import Multiply from '~/components/Multiply.vue'
 export default {
 	components: {
 		container,
 		Title,
-		SocialMedia
+		SocialMedia,
+		Multiply
 	},
 	props: {
 		pageData: {
@@ -92,7 +166,7 @@ export default {
 		.col-6 {
 			@include smallerThan(860px) {
 				flex-basis: 100% !important;
-				max-width: 100% !important;
+				max-width: 100%;
 			}
 		}
 	}
@@ -145,6 +219,21 @@ export default {
 		}
 	}
 	.imageSec {
+		.groupDot {
+			display: none;
+
+			@include largerThan(880px) {
+				display: block;
+				position: absolute;
+				z-index: 9999;
+				left: -10px;
+			}
+
+			@include largerThan(1350px) {
+				left: 50px !important;
+			}
+		}
+
 		@include smallerThan(1350px) {
 			flex-basis: 40%;
 			max-width: 40%;
@@ -160,6 +249,12 @@ export default {
 		}
 		@include largerThan(1300px) {
 			max-width: 45%;
+		}
+
+		@include smallerThan(860px) {
+			max-width: 400px !important;
+			text-align: center;
+			margin: 40px auto 0 auto;
 		}
 		.img {
 			@include largerThan(880px) {
@@ -179,7 +274,7 @@ export default {
 				width: 100%;
 
 				@include largerThan(880px) {
-					height: calc(100% - 40px);
+					height: calc(100% - 30px);
 				}
 				height: calc(100% - 20px);
 				transition: all $transitionTime ease-in;
@@ -227,6 +322,22 @@ export default {
 			@include smallerThan(1350px) {
 				left: 40px;
 			}
+		}
+	}
+	.dot.b {
+		@include smallerThan(900px) {
+			top: 806px !important;
+		}
+	}
+	.dot.a {
+		@include smallerThan(900px) {
+			left: 400px !important;
+		}
+	}
+	.dot.r {
+		@include smallerThan(900px) {
+			top: 1140px !important;
+			left: 265px !important;
 		}
 	}
 }

@@ -46,9 +46,71 @@
         </div>
         <div class="hint">
           Need Help?
-          <button class="btn arrow">Message me</button>
+          <button
+            class="btn arrow"
+            @click="$scrollTo('.contactme', { offset: -150 })"
+          >Message me</button>
         </div>
       </container>
+    </div>
+
+    <div class="dotUtils">
+      <Multiply
+        class="a"
+        :style="{
+		 top: '480px',
+		 left: '680px',
+		 zIndex: '1'
+	 }"
+      />
+      <Multiply
+        class="b"
+        :style="{
+		 top: '722px',
+		 left: '534px',
+		 zIndex: '1'
+	 }"
+      />
+      <Multiply
+        class="c"
+        :style="{
+		 top: '850px',
+		 left: '1176px',
+		 zIndex: '-1'
+	 }"
+      />
+      <div
+        class="dot a"
+        :style="{
+		 top: '770px',
+		 left: '166px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot b"
+        :style="{
+		 top: '890px',
+		 left: '756px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot"
+        :style="{
+		 top: '450px',
+		 left: '606px',
+		 zIndex: '-1'
+	 }"
+      ></div>
+      <div
+        class="dot d"
+        :style="{
+		 top: '775px',
+		 left: '1500px',
+		 zIndex: '-1'
+	 }"
+      ></div>
     </div>
   </div>
 </template>
@@ -57,11 +119,13 @@
 import container from './Container'
 import Title from '~/components/Title.vue'
 import SocialMedia from '~/components/SocialMedia'
+import Multiply from '~/components/Multiply.vue'
 export default {
 	components: {
 		container,
 		Title,
-		SocialMedia
+		SocialMedia,
+		Multiply
 	},
 	props: {
 		pageData: {
@@ -84,6 +148,7 @@ export default {
 
 <style lang="scss">
 .myskills {
+	position: relative;
 	.titleContainer {
 		@include largerThan(880px) {
 			padding-right: 70px;
@@ -91,7 +156,9 @@ export default {
 		}
 	}
 	.title {
-		margin-left: -20px;
+		@include largerThan(880px) {
+			margin-left: -20px;
+		}
 		margin-bottom: 30px;
 		@include smallerThan(880px) {
 			text-align: center;
@@ -122,7 +189,7 @@ export default {
 		}
 	}
 	padding-top: 200px;
-	padding-bottom: 180px;
+	margin-bottom: 180px;
 	.row {
 		.col-6 {
 			&:first-child {
@@ -236,6 +303,35 @@ export default {
 					display: block;
 				}
 			}
+		}
+	}
+	.multiply.a {
+		@include smallerThan(900px) {
+			top: 480px !important;
+			left: 46px !important;
+		}
+	}
+	.multiply.b {
+		@include smallerThan(900px) {
+			top: 976px !important;
+			left: 404px !important;
+		}
+	}
+	.multiply.c {
+		@include smallerThan(900px) {
+			top: 95px !important;
+			left: 176px !important;
+		}
+	}
+	.dot.a {
+		@include smallerThan(900px) {
+			top: 1300px !important;
+		}
+	}
+	.dot.d {
+		@include smallerThan(900px) {
+			top: 1390px !important;
+			left: 398px !important;
 		}
 	}
 }
