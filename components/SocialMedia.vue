@@ -31,9 +31,6 @@ export default {
 		li {
 			display: inline-block;
 			margin: 3px 13px;
-			&:first-child {
-				margin-left: 0;
-			}
 			img {
 				width: 20px;
 			}

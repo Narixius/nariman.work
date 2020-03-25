@@ -317,10 +317,10 @@ export default {
 				display: block;
 			}
 			@include largerThan(1350px) {
-				left: 100px;
+				left: 90px;
 			}
 			@include smallerThan(1350px) {
-				left: 40px;
+				left: 30px;
 			}
 		}
 	}
