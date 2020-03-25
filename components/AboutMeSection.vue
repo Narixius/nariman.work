@@ -224,6 +224,7 @@ export default {
 
 			@include largerThan(880px) {
 				display: block;
+				top: -8px;
 				position: absolute;
 				z-index: 9999;
 				left: -10px;
