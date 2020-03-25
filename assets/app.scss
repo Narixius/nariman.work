@@ -67,27 +67,29 @@
   &.arrow {
     &:hover {
       &::before {
-        margin-top: 0px;
+        margin-top: 8px;
+        height: 7px;
       }
     }
     &::before {
-      content: '─';
+      content: ' ';
       transition: all 0.3s;
       font-size: 16px;
-      width: 6.5px;
+      width: 0px;
       margin-left: -7px;
-      margin-top: -1px;
       font-family: Arial;
       float: right;
-      margin-top: -3px;
-      transform: rotate(90deg);
+      border-left: 1px solid black;
+      height: 10px;
+      margin-right: 3px;
+      margin-top: 5px;
     }
     &::after {
       transition: all 0.3s;
       content: ' ';
       display: inline-block;
       width: 6px;
-      border: solid black 2px;
+      border: solid black 1px;
       height: 6px;
       border-bottom: white;
       border-left: white;
