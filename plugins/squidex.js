@@ -31,11 +31,18 @@ function clearBearerToken() {
 
 async function fetchBearerToken() {
   // Check if we have already a bearer token in local store.
-  let token = getBearerToken()
+
+  let token;
+
+  /*
+  * for netlify generate, I prefer to comment this code
+
+  token = getBearerToken()
 
   if (token && token.length) {
     return token
   }
+  */
   const axios = require('axios').default
   const qs = require('querystring')
   let response = await axios.post(
