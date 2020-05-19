@@ -268,7 +268,7 @@ export default {
 			height: 100%;
 			img {
 				@include largerThan(900px) {
-					mix-blend-mode: multiply;
+					//mix-blend-mode: multiply;
 				}
 				filter: grayscale(100%);
 				object-fit: cover;
