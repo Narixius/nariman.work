@@ -290,7 +290,7 @@ export default {
 			}
 			img {
 				@include largerThan(1060px) {
-					mix-blend-mode: multiply;
+					//mix-blend-mode: multiply;
 					width: 300px;
 				}
 				width: calc(100% - 180px);
