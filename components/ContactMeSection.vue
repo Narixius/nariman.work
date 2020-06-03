@@ -408,6 +408,9 @@ export default {
 		text-align: center;
 		margin-bottom: 30px;
 		margin-top: 70px;
+		@include largerThan(1060px) {
+			margin-top: 0;
+		}
 	}
 	.multiply.d {
 		@include smallerThan(900px) {

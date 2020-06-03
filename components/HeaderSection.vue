@@ -24,7 +24,7 @@
         <p>{{headerContent.description}}</p>
         <button
           class="btn arrow"
-          @click="$scrollTo('.aboutme', { offset: -150 })"
+          @click="$scrollTo('.aboutme', { offset: -80 })"
         >{{headerContent.buttonText}}</button>
       </div>
     </div>
@@ -170,7 +170,7 @@ export default {
 		position: absolute;
 		@include forLargeScreens($largestDesktop) {
 			width: 330px;
-			height: 800px;
+			height: 771px;
 		}
 		@include largerSmaller(955px, $largestDesktop) {
 			width: 280px;
@@ -182,7 +182,7 @@ export default {
 		}
 		@include largerSmaller(650px, 880px) {
 			width: 190px;
-			height: 720px;
+			height: 680px;
 		}
 		width: 150px;
 		height: 650px;
@@ -243,7 +243,7 @@ export default {
 			margin-top: 100px;
 		}
 		max-width: 85%;
-		margin: 120px auto 0 auto;
+		margin: 90px auto 0 auto;
 		.informations {
 			@include smallerThan(650px) {
 				position: absolute;

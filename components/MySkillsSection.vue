@@ -48,7 +48,7 @@
           Need Help?
           <button
             class="btn arrow"
-            @click="$scrollTo('.contactme', { offset: -150 })"
+            @click="$scrollTo('.contactme', { offset: -50 })"
           >Message me</button>
         </div>
       </container>
@@ -189,7 +189,7 @@ export default {
 		}
 	}
 	padding-top: 200px;
-	margin-bottom: 180px;
+	margin-bottom: 80px;
 	.row {
 		.col-6 {
 			&:first-child {

@@ -48,13 +48,13 @@ export default {
 			let className = ''
 			switch (index) {
 				case 0:
-					this.$scrollTo('.aboutme', { offset: -150 })
+					this.$scrollTo('.aboutme', { offset: -80 })
 					break
 				case 1:
-					this.$scrollTo('.myskills', { offset: 80 })
+					this.$scrollTo('.myskills', { offset: 130 })
 					break
 				case 2:
-					this.$scrollTo('.contactme', { offset: -150 })
+					this.$scrollTo('.contactme', { offset: -50 })
 					break
 			}
 		}
@@ -73,7 +73,9 @@ export default {
 			animation: noWidth $transitionTime;
 		}
 	}
-
+	@include smallerThan(650px) {
+		height: 57px;
+	}
 	@keyframes noWidth {
 		from {
 			width: 100%;
@@ -126,6 +128,8 @@ export default {
 				}
 				width: 30px;
 				padding: 15px;
+				position: fixed;
+				z-index: 99;
 				div {
 					width: 28px;
 					height: 4px;

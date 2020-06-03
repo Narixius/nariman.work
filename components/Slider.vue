@@ -22,7 +22,6 @@
       <div class="images">
         <img
           v-for="image,index in images"
-          v-if="index != activeSlide"
           @click="activeSlide = index"
           :src="image.url"
           :alt="image.metadata.description"
@@ -140,8 +139,9 @@ export default {
 				height: 400px;
 			}
 			@include smallerThan(650px) {
-				height: 250px;
 				margin-left: 42px;
+				height: 100%;
+				width: 239px;
 			}
 			@include largerSmaller(650px, 880px) {
 				width: 100%;
@@ -216,6 +216,8 @@ export default {
 				background-color: transparent;
 				margin-top: -9px;
 			}
+
+			height: 157px;
 			padding-bottom: 10px;
 			background-color: white;
 			z-index: 10;
