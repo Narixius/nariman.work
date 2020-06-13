@@ -199,7 +199,7 @@ export default {
 					list-style: none;
 					li {
 						margin: 10px auto;
-						font-family: 'Montserrat-Medium';
+						font-weight: 500;
 						img {
 							height: 20px;
 							width: 31px;

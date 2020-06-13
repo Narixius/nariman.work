@@ -341,7 +341,7 @@ export default {
 	}
 	.form {
 		span {
-			font-family: 'Montserrat-SemiBold';
+			font-weight: 600;
 		}
 		& > div {
 			margin-top: 50px;
@@ -372,19 +372,19 @@ export default {
 			button {
 				margin-left: 90px;
 				margin-top: 10px;
-				font-family: 'Montserrat-Medium';
+				font-weight: 500;
 			}
 		}
 		.alert {
 			padding: 20px;
 			span {
-				font-family: 'Montserrat-Medium';
+				font-weight: 500;
 				font-size: 20px;
 			}
 			p {
 				line-height: 25px;
 				margin-top: 10px;
-				font-family: 'Montserrat-Regular';
+				font-weight: 400;
 			}
 			margin-left: 90px;
 			margin-top: 20px;
@@ -401,7 +401,7 @@ export default {
 	}
 	.soc {
 		span {
-			font-family: 'Montserrat-SemiBold';
+			font-weight: 600;
 			margin-bottom: 20px;
 			display: block;
 		}

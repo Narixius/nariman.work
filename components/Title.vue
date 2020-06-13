@@ -28,6 +28,6 @@ export default {
 	}
 	font-size: 30px;
 	text-shadow: -13px -12px 0px rgba(0, 0, 0, 0.2);
-	font-family: 'Montserrat-SemiBold';
+	font-weight: 600;
 }
 </style>

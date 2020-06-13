@@ -175,7 +175,7 @@ export default {
 		div.hint {
 			display: none;
 			@include largerThan(1300px) {
-				font-family: 'Montserrat-SemiBold';
+				font-weight: 600;
 				display: block;
 				position: absolute;
 				top: 50%;
@@ -236,7 +236,7 @@ export default {
 			}
 		}
 		h3 {
-			font-family: 'Montserrat-SemiBold';
+			font-weight: 600;
 			span {
 				display: inline-block;
 				padding: 0 3px;
@@ -254,7 +254,7 @@ export default {
 					vertical-align: middle;
 				}
 				margin: 8px auto;
-				font-family: 'Montserrat-Medium';
+				font-weight: 500;
 			}
 		}
 	}
@@ -266,7 +266,7 @@ export default {
 			padding: 20px;
 		}
 		p {
-			font-family: 'Montserrat-Medium';
+			font-weight: 500;
 		}
 		& > div {
 			padding: 20px;
@@ -299,7 +299,7 @@ export default {
 					}
 				}
 				& > span {
-					font-family: 'Montserrat-Medium';
+					font-weight: 500;
 					display: block;
 				}
 			}

@@ -118,7 +118,7 @@ export default {
 					margin-left: 0;
 				}
 				cursor: pointer;
-				font-family: 'Montserrat-Medium';
+				font-weight: 500;
 			}
 			&.navBtn {
 				cursor: pointer;

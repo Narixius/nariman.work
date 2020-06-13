@@ -193,7 +193,7 @@ export default {
 			padding: 20px;
 			span {
 				padding: 3px;
-				font-family: 'Montserrat-Bold';
+				font-weight: 700;
 				color: white;
 				border: 3px solid white;
 				padding: 3px 6px;
@@ -267,7 +267,7 @@ export default {
 					margin-top: 10px;
 				}
 
-				font-family: 'Montserrat-SemiBold';
+				font-weight: 600;
 				font-size: 40px;
 			}
 			.tags {
