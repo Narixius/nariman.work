@@ -1,5 +1,6 @@
 const { Validator } = require('node-input-validator')
 const TOKEN = '294830180:AAGXaCF1DlSqE8Lyk9VYbzYYKRMfBA5RHUw'
+const ADMIN_USERID = 69367395
 const rp = require('request-promise')
 exports.handler = async (event, context) => {
   if (event.httpMethod == 'POST') {
@@ -35,7 +36,7 @@ exports.handler = async (event, context) => {
       text += '📬 Message:\n' + event.queryStringParameters.message
       await rp({
         url: 'https://api.telegram.org/bot' + TOKEN + '/sendMessage',
-        qs: { chat_id: '69367395', text: text }
+        qs: { chat_id: ADMIN_USERID, text: text }
       })
       return {
         statusCode: 200,
