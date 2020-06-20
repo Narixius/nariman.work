@@ -8,7 +8,7 @@ For live preview [Click here](http://nariman-work.netlify.com/)
 
 ### What you need to change
 
-For contact form, the message of user will send to the telegram with a bot. The token of the bot and user ID of the receiver (your telegram account user id) need to be changed. Modify this fields in [functions/contactForm.js](https://github.com/NarimanMov/nariman.work/blob/master/functions/contactFrom.js)
+For the contact form, the message of the user will send to the telegram with a bot. The token of the bot and user ID of the receiver (your telegram account user-id) need to be changed. Modify these fields in [functions/contactForm.js](https://github.com/NarimanMov/nariman.work/blob/master/functions/contactFrom.js)
 
 Also the [Squidex](https://squidex.io) access token are in the .env file.
 
